@@ -33,7 +33,7 @@ function Login() {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({...user})
         };
-        fetch('http://3.90.253.77:8080/authentication-service/api/v1/login', requestOptions)
+        fetch('http://18.222.135.175:8080/authentication-service/api/v1/login', requestOptions)
             .then((result) => {
                 if (result.status === 200) {
                     const requestOptions1 = {
@@ -41,7 +41,7 @@ function Login() {
                         headers: { 'Content-Type': 'application/json' }
                         
                     };
-                    fetch('http://3.90.253.77:8080/user-service/api/v1/user/alluser/'+user.userEmail, requestOptions1).then((res)=>{
+                    fetch('http://18.222.135.175:8080/user-service/api/v1/user/alluser/'+user.userEmail, requestOptions1).then((res)=>{
                         if(res.status==200){
                             return Promise.resolve(res.json());
                         }else {

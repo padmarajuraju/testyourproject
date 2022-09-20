@@ -23,7 +23,7 @@ function VCProfile() {
     const getUserData = () => {
         let email = localStorage.getItem("centerEmail");
         // let url = "http://localhost:8080/user-service/api/v1/vaccination-center/"+email;
-        let url = "http://3.90.253.77:8080/user-service/api/v1/vaccination-center/"+email;
+        let url = "http://18.222.135.175:8080/user-service/api/v1/vaccination-center/"+email;
         return fetch(url , {headers:{
         'Content-Type': 'application/json',
         'Accept': 'application/json'
